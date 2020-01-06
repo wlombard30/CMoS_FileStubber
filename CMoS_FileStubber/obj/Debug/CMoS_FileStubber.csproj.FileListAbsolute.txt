@@ -1,0 +1,10 @@
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\bin\Debug\CMoS_FileStubber.exe.config
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\bin\Debug\CMoS_FileStubber.exe
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\bin\Debug\CMoS_FileStubber.pdb
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.csprojAssemblyReference.cache
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.frmDefault.resources
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.Properties.Resources.resources
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.csproj.GenerateResource.cache
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.csproj.CoreCompileInputs.cache
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.exe
+C:\Users\WLombard\Documents\Visual Studio 2019\Projects\CMoS_FileStubber\CMoS_FileStubber\obj\Debug\CMoS_FileStubber.pdb

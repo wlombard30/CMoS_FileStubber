@@ -32,10 +32,14 @@
             this.browseFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabMCOH_MCEH = new System.Windows.Forms.TabPage();
-            this.tabMTCH = new System.Windows.Forms.TabPage();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.txtHiddenMCEH = new System.Windows.Forms.TextBox();
+            this.lblProgressMessage = new System.Windows.Forms.Label();
+            this.processBuild = new System.Windows.Forms.ProgressBar();
+            this.btnConvert = new System.Windows.Forms.Button();
             this.txtFeedback = new System.Windows.Forms.TextBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.tabMTCH = new System.Windows.Forms.TabPage();
             this.tabMain.SuspendLayout();
             this.tabMCOH_MCEH.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +61,10 @@
             // 
             // tabMCOH_MCEH
             // 
+            this.tabMCOH_MCEH.Controls.Add(this.txtHiddenMCEH);
+            this.tabMCOH_MCEH.Controls.Add(this.lblProgressMessage);
+            this.tabMCOH_MCEH.Controls.Add(this.processBuild);
+            this.tabMCOH_MCEH.Controls.Add(this.btnConvert);
             this.tabMCOH_MCEH.Controls.Add(this.txtFeedback);
             this.tabMCOH_MCEH.Controls.Add(this.btnExport);
             this.tabMCOH_MCEH.Controls.Add(this.btnOpen);
@@ -65,29 +73,57 @@
             this.tabMCOH_MCEH.Padding = new System.Windows.Forms.Padding(3);
             this.tabMCOH_MCEH.Size = new System.Drawing.Size(1003, 476);
             this.tabMCOH_MCEH.TabIndex = 0;
-            this.tabMCOH_MCEH.Text = "MCEH";
+            this.tabMCOH_MCEH.Text = "MCOH";
             this.tabMCOH_MCEH.UseVisualStyleBackColor = true;
             // 
-            // tabMTCH
+            // txtHiddenMCEH
             // 
-            this.tabMTCH.Location = new System.Drawing.Point(4, 22);
-            this.tabMTCH.Name = "tabMTCH";
-            this.tabMTCH.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMTCH.Size = new System.Drawing.Size(1005, 483);
-            this.tabMTCH.TabIndex = 1;
-            this.tabMTCH.Text = "MTCH";
-            this.tabMTCH.UseVisualStyleBackColor = true;
+            this.txtHiddenMCEH.Location = new System.Drawing.Point(628, 6);
+            this.txtHiddenMCEH.Multiline = true;
+            this.txtHiddenMCEH.Name = "txtHiddenMCEH";
+            this.txtHiddenMCEH.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtHiddenMCEH.Size = new System.Drawing.Size(350, 405);
+            this.txtHiddenMCEH.TabIndex = 6;
+            this.txtHiddenMCEH.Visible = false;
+            this.txtHiddenMCEH.WordWrap = false;
             // 
-            // btnOpen
+            // lblProgressMessage
             // 
-            this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpen.Location = new System.Drawing.Point(836, 442);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(73, 24);
-            this.btnOpen.TabIndex = 0;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
+            this.lblProgressMessage.AutoSize = true;
+            this.lblProgressMessage.Location = new System.Drawing.Point(391, 448);
+            this.lblProgressMessage.Name = "lblProgressMessage";
+            this.lblProgressMessage.Size = new System.Drawing.Size(0, 13);
+            this.lblProgressMessage.TabIndex = 5;
+            // 
+            // processBuild
+            // 
+            this.processBuild.Location = new System.Drawing.Point(9, 442);
+            this.processBuild.Name = "processBuild";
+            this.processBuild.Size = new System.Drawing.Size(376, 23);
+            this.processBuild.TabIndex = 4;
+            // 
+            // btnConvert
+            // 
+            this.btnConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConvert.Location = new System.Drawing.Point(838, 442);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(73, 24);
+            this.btnConvert.TabIndex = 3;
+            this.btnConvert.Text = "Convert";
+            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Click += new System.EventHandler(this.BtnConvert_Click);
+            // 
+            // txtFeedback
+            // 
+            this.txtFeedback.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFeedback.Location = new System.Drawing.Point(3, 6);
+            this.txtFeedback.Multiline = true;
+            this.txtFeedback.Name = "txtFeedback";
+            this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtFeedback.Size = new System.Drawing.Size(994, 426);
+            this.txtFeedback.TabIndex = 2;
+            this.txtFeedback.WordWrap = false;
             // 
             // btnExport
             // 
@@ -100,15 +136,26 @@
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.BtnExport_Click);
             // 
-            // txtFeedback
+            // btnOpen
             // 
-            this.txtFeedback.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFeedback.Location = new System.Drawing.Point(3, 6);
-            this.txtFeedback.Multiline = true;
-            this.txtFeedback.Name = "txtFeedback";
-            this.txtFeedback.Size = new System.Drawing.Size(994, 426);
-            this.txtFeedback.TabIndex = 2;
+            this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOpen.Location = new System.Drawing.Point(759, 442);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(73, 24);
+            this.btnOpen.TabIndex = 0;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
+            // 
+            // tabMTCH
+            // 
+            this.tabMTCH.Location = new System.Drawing.Point(4, 22);
+            this.tabMTCH.Name = "tabMTCH";
+            this.tabMTCH.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMTCH.Size = new System.Drawing.Size(1003, 476);
+            this.tabMTCH.TabIndex = 1;
+            this.tabMTCH.Text = "MTCH";
+            this.tabMTCH.UseVisualStyleBackColor = true;
             // 
             // frmDefault
             // 
@@ -133,10 +180,14 @@
         private System.Windows.Forms.FolderBrowserDialog browseFolder;
         private System.Windows.Forms.TabControl tabMain;
         private System.Windows.Forms.TabPage tabMCOH_MCEH;
-        private System.Windows.Forms.TextBox txtFeedback;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.TabPage tabMTCH;
+        private System.Windows.Forms.Label lblProgressMessage;
+        private System.Windows.Forms.ProgressBar processBuild;
+        private System.Windows.Forms.Button btnConvert;
+        public System.Windows.Forms.TextBox txtHiddenMCEH;
+        private System.Windows.Forms.TextBox txtFeedback;
     }
 }
 

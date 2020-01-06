@@ -17,7 +17,7 @@ namespace CMoS_FileStubber
             return fileColumnHeaders;
         }
 
-        public string columnMCOH_MCEHFileDateHeaders()
+        public string columnMCOH_MCEHFileDataHeaders()
         {
             fileColumnHeaders = "Record Type, Collection Method, Deduction Type, Reference Number, Sub Reference, Currency, Country, Initial Amount, Amount, Inflation Update, Inflation Update Percentage, Start Date, End Date, Change Date, Client Action Date, Transaction Number, Original Sequence, Return Code, Return Reason, Quotation Number, Quotation Instance";
 
